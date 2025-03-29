@@ -15,7 +15,7 @@ def retry(
 
             for i in range(n_retry + 1):
                 if i > 0:
-                    retry_logger.debug(f"retry {i}")
+                    retry_logger.debug("retry {i}")
 
                 try:
                     result = func(*args, **kwargs)
