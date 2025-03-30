@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/bandit-agents  # Replace <package-name> with your PyPI project name
+      url: https://pypi.org/p/retry-decorator-mt  # Replace <package-name> with your PyPI project name
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
     steps:
@@ -78,7 +78,7 @@ jobs:
           ./dist/*.whl
     - name: Create GitHub Release
       env:
-        GH_TOKEN: ${{ secrets.BANDIT_AGENT_ACTIONS_TOKEN }}
+        GH_TOKEN: ${{ secrets.RETRY_DECORATOR_ACTIONS_TOKEN }}
       run: >-
         gh release create
         "$GITHUB_REF_NAME"
@@ -86,7 +86,7 @@ jobs:
         --notes ""
     - name: Upload artifact signatures to GitHub Release
       env:
-        GH_TOKEN: ${{ secrets.BANDIT_AGENT_ACTIONS_TOKEN }}
+        GH_TOKEN: ${{ secrets.RETRY_DECORATOR_ACTIONS_TOKEN }}
       # Upload to GitHub Release using the `gh` CLI.
       # `dist/` contains the built packages, and the
       # sigstore-produced signatures and certificates.
@@ -104,7 +104,7 @@ jobs:
 
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/bandit-agents
+      url: https://test.pypi.org/p/retry-decorator-mt
 
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
