@@ -3,7 +3,7 @@ requires = ["setuptools>=61", "wheel", "setuptools-git-versioning"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "retry-decorator"
+name = "retry-decorator-mt"
 description = "Decorator to allow for retry of th decorated object if a given exception is raised"
 authors = [
   {name = "Vincent Martel", email = "vincent.martel.11235@gmail.com"},
