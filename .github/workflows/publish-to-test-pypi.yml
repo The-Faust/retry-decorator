@@ -58,7 +58,7 @@ jobs:
     needs:
     - publish-to-pypi
     runs-on: ubuntu-latest
-    environment: tag and releases env
+    environment: tag and release env
 
     permissions:
       contents: write  # IMPORTANT: mandatory for making GitHub Releases
